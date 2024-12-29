@@ -296,7 +296,6 @@ library(RColorBrewer)
 breaks1<-c(-1000,-2.58,-1.96,-1.65,1.65,1.96,2.58,1000)
 GIColours<- rev(brewer.pal(8, "RdBu"))
 
-#now plot on an interactive map
 t1 <- tm_shape(res2021) +
     tm_polygons("casualty_people_rate_G",
         style="fixed",
@@ -304,11 +303,30 @@ t1 <- tm_shape(res2021) +
         palette=GIColours,
         midpoint=NA,
         title="Local Getis-Ord G") +
-  tm_compass(position = c("right", "top"),type = "arrow") + 
-  tm_scale_bar(position = c("center", "bottom")) +
-  tm_layout(title = "Hot and cold spots of Casualty Rate (2021)", 
-            legend.position = c("left", "bottom"),
-            title.position = c("center", "top"))
+  tm_compass(position = c("right", "top"), type = "arrow", size = 4) +  # 增大指北针尺寸
+  tm_scale_bar(position = c("right", "bottom"), size = 1) +  # 增大比例尺尺寸
+  tm_layout(
+    # title = "Hot and Cold Spots of Casualty Rate (2021)", 
+    legend.text.size = 1,  # 增大图例文本字体大小
+    legend.title.size = 1.6,  # 增大图例标题字体大小
+    title.size = 1.8,  # 增大标题字体大小
+    legend.position = c("left", "bottom"),
+    title.position = c("center", "top")
+  )
+
+# #now plot on an interactive map
+# t1 <- tm_shape(res2021) +
+#     tm_polygons("casualty_people_rate_G",
+#         style="fixed",
+#         breaks=breaks1,
+#         palette=GIColours,
+#         midpoint=NA,
+#         title="Local Getis-Ord G") +
+#   tm_compass(position = c("right", "top"),type = "arrow") + 
+#   tm_scale_bar(position = c("center", "bottom")) +
+#   tm_layout(title = "Hot and cold spots of Casualty Rate (2021)", 
+#             legend.position = c("left", "bottom"),
+#             title.position = c("center", "top"))
 t1
 tmap_save(t1, 'hot_cold_spots_graphs/Hot and cold spots of Casualty Rate (2021).png')
 ```
@@ -324,9 +342,13 @@ t2 <- tm_shape(res2021) +
         palette=GIColours,
         midpoint=NA,
         title="Local Getis-Ord G") +
-  tm_compass(position = c("right", "top"),type = "arrow") + 
-  tm_scale_bar(position = c("center", "bottom")) +
-  tm_layout(title = "Hot and cold spots of Casualty Location Rate (2021)", 
+  tm_compass(position = c("right", "top"), type = "arrow", size = 4) +  # 增大指北针尺寸
+  tm_scale_bar(position = c("right", "bottom"), size = 1) +  # 增大比例尺尺寸
+  tm_layout(
+            # title = "Hot and cold spots of Casualty Location Rate (2021)", 
+            legend.text.size = 1,  # 增大图例文本字体大小
+            legend.title.size = 1.6,  # 增大图例标题字体大小
+            title.size = 1.8,  # 增大标题字体大小
             legend.position = c("left", "bottom"),
             title.position = c("center", "top"))
 
@@ -342,9 +364,13 @@ t3 <- tm_shape(res2022) +
         palette=GIColours,
         midpoint=NA,
         title="Local Getis-Ord G") +
-  tm_compass(position = c("right", "top"),type = "arrow") + 
-  tm_scale_bar(position = c("center", "bottom")) +
-  tm_layout(title = "Hot and cold spots of Casualty Rate (2022)", 
+  tm_compass(position = c("right", "top"), type = "arrow", size = 4) +  # 增大指北针尺寸
+  tm_scale_bar(position = c("right", "bottom"), size = 1) +  # 增大比例尺尺寸
+  tm_layout(
+            # title = "Hot and cold spots of Casualty Rate (2022)", 
+            legend.text.size = 1,  # 增大图例文本字体大小
+            legend.title.size = 1.6,  # 增大图例标题字体大小
+            title.size = 1.8,  # 增大标题字体大小
             legend.position = c("left", "bottom"),
             title.position = c("center", "top"))
 
@@ -360,9 +386,13 @@ t4 <- tm_shape(res2022) +
         palette=GIColours,
         midpoint=NA,
         title="Local Getis-Ord G") +
-  tm_compass(position = c("right", "top"),type = "arrow") + 
-  tm_scale_bar(position = c("center", "bottom")) +
-  tm_layout(title = "Hot and cold spots of Casualty Location Rate (2022)", 
+  tm_compass(position = c("right", "top"), type = "arrow", size = 4) +  # 增大指北针尺寸
+  tm_scale_bar(position = c("right", "bottom"), size = 1) +  # 增大比例尺尺寸
+  tm_layout(
+            # title = "Hot and cold spots of Casualty Location Rate (2022)", 
+            legend.text.size = 1,  # 增大图例文本字体大小
+            legend.title.size = 1.6,  # 增大图例标题字体大小
+            title.size = 1.8,  # 增大标题字体大小
             legend.position = c("left", "bottom"),
             title.position = c("center", "top"))
 
@@ -379,9 +409,13 @@ t5 <- tm_shape(res2023) +
         palette=GIColours,
         midpoint=NA,
         title="Local Getis-Ord G") +
-  tm_compass(position = c("right", "top"),type = "arrow") + 
-  tm_scale_bar(position = c("center", "bottom")) +
-  tm_layout(title = "Hot and cold spots of Casualty Rate  (2023)", 
+  tm_compass(position = c("right", "top"), type = "arrow", size = 4) +  # 增大指北针尺寸
+  tm_scale_bar(position = c("right", "bottom"), size = 1) +  # 增大比例尺尺寸
+  tm_layout(
+            # title = "Hot and cold spots of Casualty Rate  (2023)", 
+            legend.text.size = 1,  # 增大图例文本字体大小
+            legend.title.size = 1.6,  # 增大图例标题字体大小
+            title.size = 1.8,  # 增大标题字体大小
             legend.position = c("left", "bottom"),
             title.position = c("center", "top"))
 
@@ -397,13 +431,214 @@ t6 <- tm_shape(res2023) +
         palette=GIColours,
         midpoint=NA,
         title="Local Getis-Ord G") +
-  tm_compass(position = c("right", "top"),type = "arrow") + 
-  tm_scale_bar(position = c("center", "bottom")) +
-  tm_layout(title = "Hot and cold spots of Casualty Location Rate (2023)", 
+  tm_compass(position = c("right", "top"), type = "arrow", size = 4) +  # 增大指北针尺寸
+  tm_scale_bar(position = c("right", "bottom"), size = 1) +  # 增大比例尺尺寸
+  tm_layout(
+            # title = "Hot and cold spots of Casualty Location Rate (2023)", 
+            legend.text.size = 1,  # 增大图例文本字体大小
+            legend.title.size = 1.6,  # 增大图例标题字体大小
+            title.size = 1.8,  # 增大标题字体大小
             legend.position = c("left", "bottom"),
             title.position = c("center", "top"))
 
 tmap_save(t6, 'hot_cold_spots_graphs/Hot and cold spots of Casualty Length Rate (2023).png')
 t6
 ```
+
+```{r}
+borough <- st_read('data/London/London_Borough_Excluding_MHW.shp') %>% 
+  st_transform(.,4326)
+
+```
+
+
+```{r}
+
+plot(borough$geometry)
+
+
+
+```
+
+
+```{r}
+
+# 筛选冷点和热点
+cold_hot_points <- res2021 %>%
+  filter(casualty_people_rate_G <= -1.96 | casualty_people_rate_G >= 1.96)  # 根据 Getis-Ord G* 筛选
+
+# 冷点和热点分组
+cold_points <- cold_hot_points %>% filter(casualty_people_rate_G <= -1.96)
+hot_points <- cold_hot_points %>% filter(casualty_people_rate_G >= 1.96)
+
+tmap_mode('plot')
+# 绘图
+tm_shape(borough) +
+  tm_polygons(col = "lightgrey", border.col = "black", lwd = 0.5) +  # Borough 底图
+  tm_shape(cold_points) +
+  tm_polygons(col = "blue", alpha = 0.5, border.alpha = 0, title = "Cold Spots") +  # 冷点
+  tm_shape(hot_points) +
+  tm_polygons(col = "red", alpha = 0.5, border.alpha = 0, title = "Hot Spots") +  # 热点
+  tm_compass(position = c("right", "top"), type = "arrow") +
+  tm_scale_bar(position = c("center", "bottom")) +
+  tm_layout(
+    title = "Hot and Cold Spots of Casualty Rate (2021)",
+    title.position = c("center", "top"),
+    legend.position = c("left", "bottom")
+  )
+
+
+```
+```{r}
+# 筛选冷点和热点
+cold_hot_points <- res2022 %>%
+  filter(casualty_people_rate_G <= -1.96 | casualty_people_rate_G >= 1.96)  # 根据 Getis-Ord G* 筛选
+
+# 冷点和热点分组
+cold_points <- cold_hot_points %>% filter(casualty_people_rate_G <= -1.96)
+hot_points <- cold_hot_points %>% filter(casualty_people_rate_G >= 1.96)
+
+tmap_mode('plot')
+# 绘图
+tm_shape(borough) +
+  tm_polygons(col = "lightgrey", border.col = "black", lwd = 0.5) +  # Borough 底图
+  tm_shape(cold_points) +
+  tm_polygons(col = "blue", alpha = 0.5, border.alpha = 0, title = "Cold Spots") +  # 冷点
+  tm_shape(hot_points) +
+  tm_polygons(col = "red", alpha = 0.5, border.alpha = 0, title = "Hot Spots") +  # 热点
+  tm_compass(position = c("right", "top"), type = "arrow") +
+  tm_scale_bar(position = c("center", "bottom")) +
+  tm_layout(
+    title = "Hot and Cold Spots of Casualty Rate (2021)",
+    title.position = c("center", "top"),
+    legend.position = c("left", "bottom")
+  )
+
+```
+
+```{r}
+# 筛选冷点和热点
+cold_hot_points <- res2023 %>%
+  filter(casualty_people_rate_G <= -1.96 | casualty_people_rate_G >= 1.96)  # 根据 Getis-Ord G* 筛选
+
+# 冷点和热点分组
+cold_points <- cold_hot_points %>% filter(casualty_people_rate_G <= -1.96)
+hot_points <- cold_hot_points %>% filter(casualty_people_rate_G >= 1.96)
+
+tmap_mode('plot')
+# 绘图
+tm_shape(borough) +
+  tm_polygons(col = "lightgrey", border.col = "black", lwd = 0.5) +  # Borough 底图
+  tm_shape(cold_points) +
+  tm_polygons(col = "blue", alpha = 0.5, border.alpha = 0, title = "Cold Spots") +  # 冷点
+  tm_shape(hot_points) +
+  tm_polygons(col = "red", alpha = 0.5, border.alpha = 0, title = "Hot Spots") +  # 热点
+  tm_compass(position = c("right", "top"), type = "arrow") +
+  tm_scale_bar(position = c("center", "bottom")) +
+  tm_layout(
+    title = "Hot and Cold Spots of Casualty Rate (2023)",
+    title.position = c("center", "top"),
+    legend.position = c("left", "bottom")
+  )
+
+
+```
+
+
+
+```{r}
+```
+
+
+```{r}
+tmap_mode('view')
+
+# 绘图
+tm_shape(borough) +
+  tm_polygons(col = "lightgrey", border.col = "black", lwd = 0.5) +  # Borough 底图
+  tm_shape(cold_points) +
+  tm_polygons(col = "blue", alpha = 0.5, border.alpha = 0, title = "Cold Spots") +  # 冷点
+  tm_shape(hot_points) +
+  tm_polygons(col = "red", alpha = 0.5, border.alpha = 0, title = "Hot Spots") +  # 热点
+  tm_compass(position = c("right", "top"), type = "arrow") +
+  tm_scale_bar(position = c("center", "bottom")) +
+  tm_layout(
+    title = "Hot and Cold Spots of Casualty Rate (2023)",
+    title.position = c("center", "top"),
+    legend.position = c("left", "bottom")
+  )
+```
+
+```{r}
+# 筛选冷点和热点
+cold_hot_points <- res2023 %>%
+  filter(casualty_length_rate_G <= -1.96 | casualty_length_rate_G >= 1.96)  # 根据 Getis-Ord G* 筛选
+
+# 冷点和热点分组
+cold_points <- cold_hot_points %>% filter(casualty_length_rate_G <= -1.96)
+hot_points <- cold_hot_points %>% filter(casualty_length_rate_G >= 1.96)
+
+tmap_mode('plot')
+# 绘图
+tm_shape(borough) +
+  tm_polygons(col = "lightgrey", border.col = "black", lwd = 0.5) +  # Borough 底图
+  tm_shape(cold_points) +
+  tm_polygons(col = "blue", alpha = 0.5, border.alpha = 0, title = "Cold Spots") +  # 冷点
+  tm_shape(hot_points) +
+  tm_polygons(col = "red", alpha = 0.5, border.alpha = 0, title = "Hot Spots") +  # 热点
+  tm_compass(position = c("right", "top"), type = "arrow") +
+  tm_scale_bar(position = c("center", "bottom")) +
+  tm_layout(
+    title = "Hot and Cold Spots of Casualty Location Rate (2023)",
+    title.position = c("center", "top"),
+    legend.position = c("left", "bottom")
+  )
+
+```
+
+
+```{r}
+
+tmap_mode('view')
+
+# 绘图
+tm_shape(borough) +
+  tm_polygons(col = "lightgrey", border.col = "black", lwd = 0.5) +  # Borough 底图
+  tm_shape(cold_points) +
+  tm_polygons(col = "blue", alpha = 0.5, border.alpha = 0, title = "Cold Spots") +  # 冷点
+  tm_shape(hot_points) +
+  tm_polygons(col = "red", alpha = 0.5, border.alpha = 0, title = "Hot Spots") +  # 热点
+  tm_compass(position = c("right", "top"), type = "arrow") +
+  tm_scale_bar(position = c("center", "bottom")) +
+  tm_layout(
+    title = "Hot and Cold Spots of Casualty Location Rate (2023)",
+    title.position = c("center", "top"),
+    legend.position = c("left", "bottom")
+  )
+
+```
+
+The casualty rate hotspot areas are primarily located in:
+
+- the northeastern part of Enfield, 
+- the entire eastern half of Haringey, 
+- the central area of Brent, and 
+- the junctions of Waltham Forest, Hackney, Tower Hamlets, and Newham boroughs. Additionally, 
+- the central region of Southwark and 
+- southern part of Barking and dagenham as well as 
+- the border areas shared by Merton, Lambeth, Croydon, and Sutton boroughs 
+
+are also identified as hotspots. These areas suggest a higher risk of traffic-related injuries for residents.
+
+Conversely, 
+- the northern part of Hillingdon, 
+- the eastern part of Havering, 
+- the western part of Westminster, and 
+- the eastern part of Kensington and Chelsea, along with 
+- the central regions of Bexley and Bromley, are identified as cold spots. 
+- The junction area of Barnet, Camden, and Haringey boroughs 
+
+is also considered a cold spot, indicating that residents in these areas are comparatively safer.
+
+
 
